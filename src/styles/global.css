@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+:root{
+    /* --darker-primary:hsl(337, 61%, 44%);
+    --primary-color:hsl(337, 75%, 70%);
+    --secondry-color:hsl(337, 75%, 85%);
+    --background: hsl(322, 73%, 98%);
+    --lighter-bg:hsl(315, 80%, 99%); */
+    --darker-primary:hsl(281, 76%, 13%);
+    --primary-color:hsl(281, 76%, 13%);
+    --secondry-color:hsl(261, 77%, 22%);
+    --background: hsl(60, 22%, 96%);
+    --lighter-bg:hsl(60, 67%, 99%);
+}
+body{
+    overflow-x: hidden;
+    background-color: var(--lighter-bg);
+}

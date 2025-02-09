@@ -1,0 +1,89 @@
+---
+import "../styles/global.css";
+import Nav from "../components/nav.astro";
+import LanderBG from "../components/lander-bg.svelte";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Class 8B</title>
+  </head>
+  <body>
+    <Nav />
+    <LanderBG client:only />
+    <section class="h-screen w-screen">
+      <div class="lander">
+        <div class="heading">
+          <span id="pt1" class="relative">
+            "You only live once, but if you do it right once is enough"
+          </span><br/>
+          <span id="pt2" class="relative"> Class 8B </span>
+        </div>
+      </div>
+    </section>
+    <section class="honor h-screen w-screen">
+      <h2>
+        Our Achievements
+
+      </h2>
+    </section>
+  </body>
+
+  <style>
+    .honor{
+      padding-top:100px;
+      color:var(--darker-primary);
+      
+    }
+    .honor h2{
+      font-size:38px;
+      font-family: "Alex Brush", cursive;
+    }
+    .lander {
+      position: absolute;
+      z-index: 0;
+      height: 100%;
+      width: 100%;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .heading {
+      font-size: clamp(0px, 15vw, 45px);
+      font-family: "Alex Brush", cursive;
+      color: var(--darker-primary);
+      width: clamp(0px, 100vw, 450px);
+      caret-color: transparent;
+      cursor: default;
+    }
+    #pt2 {
+      top: 100px;
+      opacity: 0;
+      transition: all 2s;
+      font-size: 60px;
+    }
+    #pt1 {
+      top: 70px;
+      transition: all 2s;
+    }
+  </style>
+
+  <script>
+    //Transition from quote to heading
+    const pt1 = document.getElementById("pt1");
+    const pt2 = document.getElementById("pt2");
+    setTimeout(() => {
+      console.log("h");
+      pt1.style.top = "-20px";
+      pt1.style.opacity = "0";
+      pt2.style.top = "0px";
+      pt2.style.opacity = "1";
+    }, 1000);
+  </script>
+</html>
