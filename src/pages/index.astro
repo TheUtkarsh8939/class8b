@@ -2,12 +2,13 @@
 import "../styles/global.css";
 import Nav from "../components/nav.astro";
 import LanderBG from "../components/lander-bg.svelte";
+import Footer from "../components/footer.astro"
 ---
 
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-
+    <link rel="shortcut icon" href="favicon.png" type="image/png">
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>Class 8B</title>
@@ -31,6 +32,7 @@ import LanderBG from "../components/lander-bg.svelte";
 
       </h2>
     </section>
+    <Footer/>
   </body>
 
   <style>

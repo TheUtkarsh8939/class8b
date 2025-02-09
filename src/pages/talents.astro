@@ -3,10 +3,12 @@ import Nav from "../components/nav.astro"
 import "../styles/global.css"
 import Student from "../components/student-card.svelte"
 import LanderBG from "../components/lander-bg.svelte" 
+import Footer from "../components/footer.astro"
 ---
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="shortcut icon" href="favicon.png" type="image/png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Talents - Class 8B</title>
@@ -23,17 +25,19 @@ import LanderBG from "../components/lander-bg.svelte"
         <Student name="Pratyusha Joshi" tag="Topper, Writer"/>
         <Student name="Utkarsh Chandel" tag="Athlete, Topper, Poet, Musician, Devloper" fontSize="10px" image="./utkarsh.jpg"/>
         <Student name="Aarav Kumar" tag="Artist, Vocalist"/>
-        <Student name="Surjosnata Sinha Roy" tag="Poet, Editor" image="./surjo.jpg"/>
         <Student name="Prince Kumar" tag="Athlete"/>
         <Student name="Jiger Kumar" tag="Athlete"/>
-        <Student name="Manvi Shaw" tag="Athlete" image="./manvi.jpg"/>
+        <Student name="Surjosnata Sinha Roy" tag="Poet, Editor" image="./surjo.jpg"/>
         <Student name="Sutanwika Das" tag="Artist, Yogini" image="./sutanwika.jpg"/>
+        <Student name="Manvi Shaw" tag="Athlete" image="./manvi.jpg"/>
+        <Student name="Srishti Mondol" tag="Artist, Editor" image="./srishti.jpg"/>
         <Student name="Suvam Mondol" tag="Artist, Musician"/>
         <Student name="Hanny Mahli" tag="Singer" image="hanny.jpg"/>
         <Student name="Ankan Singh" tag="Artist"/>
 
     </div>
     </section>
+    <Footer/>
     <style>
         h2{
             font-family: "Alex Brush",cursive;

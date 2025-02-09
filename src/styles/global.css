@@ -1,5 +1,4 @@
 @import "tailwindcss";
-
 :root{
     /* --darker-primary:hsl(337, 61%, 44%);
     --primary-color:hsl(337, 75%, 70%);
@@ -15,4 +14,12 @@
 body{
     overflow-x: hidden;
     background-color: var(--lighter-bg);
+}
+*{
+    caret-color: transparent;
+    cursor:default;
+    outline: none;
+}
+a{
+    cursor:pointer;
 }
