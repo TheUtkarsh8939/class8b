@@ -3,6 +3,9 @@ import "../styles/global.css";
 import Nav from "../components/nav.astro";
 import LanderBG from "../components/lander-bg.svelte";
 import Footer from "../components/footer.astro"
+import StudentCard from "../components/student-card.svelte"
+import { ClientRouter } from 'astro:transitions';
+
 ---
 
 <html lang="en">
@@ -12,6 +15,7 @@ import Footer from "../components/footer.astro"
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>Class 8B</title>
+    <ClientRouter transition:name="fade"/>
   </head>
   <body>
     <Nav />
@@ -26,13 +30,16 @@ import Footer from "../components/footer.astro"
         </div>
       </div>
     </section>
-    <section class="honor text center flex flex-col items-center h-screen w-screen">
+    <section class="honor text center flex flex-col items-center w-screen pl-10">
       <h2>
-        Our Achievements
+        Our Member's Achievements
 
       </h2>
-
-      <div class="flex flex-col w-[clamp(0px,100vw,700px)]">
+      <div class="flex flex-col w-[clamp(0px,100vw,700px)] achivements" >
+        <div class="flex items-center">
+          <img src="./medal.png" alt="Gold Medal Image" class="size-20">
+          <span>Have Adrija, the gold medalist for every olympiad</span>
+        </div>
         <div class="flex items-center">
           <?xml version="1.0" encoding="utf-8"?>
           <!-- Generator: Adobe Illustrator 27.5.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
@@ -114,10 +121,29 @@ import Footer from "../components/footer.astro"
         </div>
       </div>
     </section>
+    <section class="lead-by font-alex text-3xl w-screen flex flex-col items-center pt-20">
+      <h2 class="text-[var(--darker-primary)]">Lead By</h2>
+      <StudentCard name="Class Teacher" tag="Akash Debnath Sir"/>
+      <div class="grid grid-cols-2 grid-rows-3 gap-10 pt-10 md:grid-rows-2 md:grid-cols-3">
+        <StudentCard name="Girls Monitor 1" tag="Sonakshi Suman"/>
+        <StudentCard name="Boys Monitor 1" tag="Utkarsh Chandel" image="utkarsh.jpg"/>
+        <StudentCard name="Girls Monitor 2" tag="Pratyusha Joshi"/>
+        <StudentCard name="Boys Monitor 2" tag="Jigar Kumar" image="jigar.jpeg"/>
+        <StudentCard name="Girls Monitor 3" tag="Adrija Mondol"/>
+        <StudentCard name="Boys Monitor 3" tag="Suvam Mondol" image="suvam.jpg"/>
+
+      </div>
+    </section>
     <Footer/>
   </body>
 
   <style>
+    .font-alex{
+      font-family: "Alex Brush", cursive;
+    }
+    .achivements span{
+      font-family: "Alex Brush", cursive;
+    }
     .honor{
       padding-top:100px;
       color:var(--darker-primary);
