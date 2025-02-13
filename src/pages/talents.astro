@@ -4,6 +4,8 @@ import "../styles/global.css";
 import Student from "../components/student-card.svelte";
 import LanderBG from "../components/lander-bg.svelte";
 import Footer from "../components/footer.astro";
+import { ClientRouter } from 'astro:transitions';
+import Analytics from '@vercel/analytics/astro'
 ---
 
 <!doctype html>
@@ -13,8 +15,10 @@ import Footer from "../components/footer.astro";
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Our Talents - Class 8B</title>
+    <ClientRouter transition:name="fade"/>
   </head>
   <body>
+    <Analytics/>
     <Nav />
     <LanderBG client:only />
     <section class="talents pt-[110px] min-h-screen pl-3">
