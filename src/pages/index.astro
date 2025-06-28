@@ -2,163 +2,316 @@
 import "../styles/global.css";
 import Nav from "../components/nav.astro";
 import LanderBG from "../components/lander-bg.svelte";
-import Footer from "../components/footer.astro"
-import StudentCard from "../components/student-card.svelte"
-import { ClientRouter } from 'astro:transitions';
-import Analytics from '@vercel/analytics/astro'
+import Footer from "../components/footer.astro";
+import StudentCard from "../components/student-card.svelte";
+import { ClientRouter } from "astro:transitions";
+import Analytics from "@vercel/analytics/astro";
 ---
 
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="shortcut icon" href="favicon.png" type="image/png">
+    <link rel="shortcut icon" href="favicon.png" type="image/png" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>Class 8B</title>
-    <ClientRouter transition:name="fade"/>
+    <ClientRouter transition:name="fade" />
   </head>
   <body>
-    <Analytics/>
+    <Analytics />
     <Nav />
     <LanderBG client:only />
     <section class="h-screen w-screen">
       <div class="lander">
         <div class="heading">
           <span id="pt1" class="relative">
-            "You only live once, but if you do it right once is enough"
-          </span><br/>
+            We weren’t just classmates. We were the glitch in the system.
+          </span><br />
           <span id="pt2" class="relative"> Class 8B </span>
         </div>
       </div>
     </section>
-    <section class="honor text center flex flex-col items-center w-screen pl-10">
-      <h2>
-        Our Member's Achievements
-
-      </h2>
-      <div class="flex flex-col w-[clamp(0px,100vw,700px)] achivements" >
+    <section
+      class="honor text center flex flex-col items-center w-screen pl-10"
+    >
+      <h2>Our Member's Achievements</h2>
+      <div class="flex flex-col w-[clamp(0px,100vw,700px)] achivements">
         <div class="flex items-center">
-          <img src="./medal.png" alt="Gold Medal Image" class="size-20">
-          <span>Have Adrija, the gold medalist for every olympiad</span>
+          <span class="text-6xl">🏓</span>
+          <span class="w-[clamp(0px,80vw,620px)]"
+            > Best U14 girl TT player in KVS Kolkata Region:Aarushi Manna</span
+          >
         </div>
         <div class="flex items-center">
-          <?xml version="1.0" encoding="utf-8"?>
+          <span class="text-6xl">🏃‍♂️</span>
+          <span class="w-[clamp(0px,80vw,620px)]"
+            >Fastest U14 runner: Prince</span
+          >
+        </div>
+        <div class="flex items-center">
+          <span class="text-6xl">🏋️</span>
+          <span class="w-[clamp(0px,80vw,620px)]"
+            > Strongest U14 athlete: Utkarsh</span
+          >
+        </div>
+        <div class="flex items-center">
+          <span class="text-6xl">🏃</span>
+          <span class="w-[clamp(0px,80vw,620px)]"
+            >Top U14 Kho Kho player in school: Prince</span
+          >
+        </div>
+                <div class="flex items-center">
+          <span class="text-6xl">🎓</span>
+          <span class="w-[clamp(0px,80vw,620px)]"
+            >Highest scorer in the entire grade: Adrija</span
+          >
+        </div>
+                <div class="flex items-center">
+          <span class="text-6xl">🖋️ </span>
+          <span class="w-[clamp(0px,80vw,620px)]"
+            >5 distinct poetic voices in the class</span
+          >
+        </div>
+        <div class="flex items-center">
+          <!--?xml version="1.0" encoding="utf-8"?-->
           <!-- Generator: Adobe Illustrator 27.5.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-          <svg version="1.1" class="size-20" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-             viewBox="0 0 600 600" style="enable-background:new 0 0 600 600;" xml:space="preserve">
-          <g id="background">
-            <rect y="0" style="fill:#FFFFFF;" width="600" height="600"/>
-          </g>
-          <g id="objects">
-            <g>
-              <ellipse style="fill:#D8DFEA;" cx="300.616" cy="554.031" rx="175.988" ry="4.969"/>
-              <path style="fill:#E8A615;" d="M530,92.139v48.298c0,78.441-63.577,142.052-141.975,142.052h-19.877l22.063-22.757
-                c64.769-1.165,117.073-54.235,117.073-119.295v-36.933h-85.185l2.84-22.728h93.704C524.917,80.774,530,85.86,530,92.139z"/>
-              <path style="fill:#E8A615;" d="M373.827,419.34v25.086H226.173V419.34c0-2.045,1.107-3.949,2.896-4.943l11.188-6.307
-                c19.365-10.909,31.348-31.393,31.348-53.639v-26.507h56.79v26.507c0,22.245,11.983,42.729,31.348,53.639l11.188,6.307
-                C372.72,415.391,373.827,417.295,373.827,419.34z"/>
-              <path style="fill:#B7791D;" d="M373.827,419.34v25.086H359.63V419.34c0-2.045-1.107-3.949-2.896-4.943l-11.188-6.307
-                c-19.365-10.909-31.348-31.393-31.348-53.639v-26.507h14.198v26.507c0,22.245,11.983,42.729,31.348,53.639l11.188,6.307
-                C372.72,415.391,373.827,417.295,373.827,419.34z"/>
-              <path style="fill:#E8A615;" d="M345.432,305.784v16.478c0,7.841-6.36,14.205-14.198,14.205h-62.469
-                c-7.837,0-14.198-6.364-14.198-14.205v-16.478H345.432z"/>
-              <rect x="271.605" y="336.468" style="fill:#B7791D;" width="56.79" height="8.353"/>
-              <path style="fill:#343B49;" d="M396.543,438.745v99.436H203.457v-99.436c0-3.125,2.556-5.682,5.679-5.682h181.728
-                C393.988,433.063,396.543,435.62,396.543,438.745z"/>
-              <path style="fill:#262D38;" d="M396.543,438.745v99.436h-11.358v-99.436c0-3.125-2.556-5.682-5.679-5.682h11.358
-                C393.988,433.063,396.543,435.62,396.543,438.745z"/>
-              <path style="fill:#262D38;" d="M413.58,535.34v11.364c0,3.125-2.556,5.682-5.679,5.682H192.099c-3.123,0-5.679-2.557-5.679-5.682
-                V535.34c0-3.125,2.556-5.682,5.679-5.682h215.802C411.025,529.658,413.58,532.215,413.58,535.34z"/>
-              <path style="fill:#171C23;" d="M413.58,535.34v11.364c0,3.125-2.556,5.682-5.679,5.682h-11.358c3.123,0,5.679-2.557,5.679-5.682
-                V535.34c0-3.125-2.556-5.682-5.679-5.682h11.358C411.025,529.658,413.58,532.215,413.58,535.34z"/>
-              <path style="fill:#E8A615;" d="M368.148,461.473v39.774c0,3.125-2.556,5.682-5.679,5.682H237.531
-                c-3.123,0-5.679-2.557-5.679-5.682v-39.774c0-3.125,2.556-5.682,5.679-5.682h124.938
-                C365.593,455.791,368.148,458.348,368.148,461.473z"/>
-              <path style="fill:#B7791D;" d="M345.432,305.784v16.478c0,7.841-6.36,14.205-14.198,14.205h-11.358
-                c7.837,0,14.198-6.364,14.198-14.205v-16.478H345.432z"/>
-              <path style="fill:#E8A615;" d="M240.37,282.488h-28.395C133.577,282.488,70,218.877,70,140.436V92.139
-                c0-6.279,5.083-11.364,11.358-11.364h93.704v22.728H92.716v36.933c0,65.06,52.304,118.13,117.073,119.295L240.37,282.488z"/>
-              <path style="fill:#E8A615;" d="M439.136,58.046V69.41c0,138.074-62.299,250.011-139.136,250.011S160.864,207.485,160.864,69.41
-                V58.046H439.136z"/>
-              <path style="fill:#B7791D;" d="M162.142,103.503h-11.358c-0.568-7.472-0.937-15.057-1.136-22.728h11.358
-                C161.205,88.445,161.574,96.031,162.142,103.503z"/>
-              <path style="fill:#B7791D;" d="M227.195,282.488h-11.358c-6.332-6.989-12.352-14.887-17.946-23.581
-                c3.919,0.483,7.865,0.739,11.898,0.824C215.241,268.112,221.062,275.726,227.195,282.488z"/>
-              <path style="fill:#B7791D;" d="M345.432,305.784v5.682c-14.254,8.836-29.531,13.637-45.432,13.637s-31.178-4.801-45.432-13.637
-                v-5.682c14.254,8.836,29.531,13.637,45.432,13.637S331.178,314.62,345.432,305.784z"/>
-              <path style="fill:#B7791D;" d="M439.136,58.046V69.41c0,133.756-58.466,242.994-131.98,249.699
-                c71.442-6.79,97.906-115.999,97.906-249.699V58.046H439.136z"/>
-              <path style="fill:#E8A615;" d="M453.333,55.205c0,3.921-1.59,7.472-4.146,10.057c-2.584,2.557-6.133,4.148-10.052,4.148H160.864
-                c-7.837,0-14.198-6.364-14.198-14.205c0-3.921,1.59-7.472,4.146-10.057c2.584-2.557,6.133-4.148,10.052-4.148h278.272
-                C446.973,41,453.333,47.364,453.333,55.205z"/>
-              <path style="fill:#B7791D;" d="M439.136,69.41c0,3.807-0.057,7.586-0.142,11.364H161.006c-0.085-3.779-0.142-7.557-0.142-11.364
-                H439.136z"/>
-              <path style="fill:#B7791D;" d="M453.333,55.205c0,3.921-1.59,7.472-4.146,10.057c-2.584,2.557-6.133,4.148-10.052,4.148h-31.235
-                c3.919,0,7.468-1.591,10.052-4.148c2.556-2.585,4.146-6.137,4.146-10.057c0-7.841-6.36-14.205-14.198-14.205h31.235
-                C446.973,41,453.333,47.364,453.333,55.205z"/>
-              <path style="fill:#B7791D;" d="M368.148,461.473v39.774c0,3.125-2.556,5.682-5.679,5.682H249.741
-                c22.943-0.455,98.531-5.341,98.531-51.139h14.198C365.593,455.791,368.148,458.348,368.148,461.473z"/>
-              <path style="fill:#FFCC66;" d="M237.531,487.042v-23.245c0-1.284,1.04-2.324,2.323-2.324h50.918
-                C290.772,461.473,250.309,465.735,237.531,487.042z"/>
-              <path style="fill:#4E5868;" d="M209.846,464.314v-23.245c0-1.284,1.04-2.324,2.323-2.324h50.918
-                C263.086,438.745,222.623,443.006,209.846,464.314z"/>
-              <path style="fill:#FFCC66;" d="M300,310.898c-30.837,0-116.363-65.088-126.727-218.76h33.733
-                C215.496,280.158,300,310.898,300,310.898z"/>
-              <path style="fill:#FFCC66;" d="M240.37,421.699c0,0,39.753-25.569,39.753-62.503v62.503H240.37z"/>
-              <path style="fill:#FFCC66;" d="M166.543,46.682v8.523h-14.198c0-4.688,3.805-8.523,8.519-8.523H166.543z"/>
-              <path style="fill:#B7791D;" d="M447.512,80.774c-0.199,7.671-0.568,15.256-1.164,22.728h-24.249l2.84-22.728H447.512z"/>
-              <path style="fill:#B7791D;" d="M399.07,259.248c-5.565,8.551-11.5,16.336-17.747,23.24h-13.175l10.052-10.341l12.011-12.415
-                C393.193,259.674,396.146,259.504,399.07,259.248z"/>
+          <svg
+            version="1.1"
+            class="size-20"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            x="0px"
+            y="0px"
+            viewBox="0 0 600 600"
+            style="enable-background:new 0 0 600 600;"
+            xml:space="preserve"
+          >
+            <g id="background">
+              <rect y="0" style="fill:#FFFFFF;" width="600" height="600"></rect>
             </g>
-          </g>
+            <g id="objects">
+              <g>
+                <ellipse
+                  style="fill:#D8DFEA;"
+                  cx="300.616"
+                  cy="554.031"
+                  rx="175.988"
+                  ry="4.969"></ellipse>
+                <path
+                  style="fill:#E8A615;"
+                  d="M530,92.139v48.298c0,78.441-63.577,142.052-141.975,142.052h-19.877l22.063-22.757
+                c64.769-1.165,117.073-54.235,117.073-119.295v-36.933h-85.185l2.84-22.728h93.704C524.917,80.774,530,85.86,530,92.139z"
+                ></path>
+                <path
+                  style="fill:#E8A615;"
+                  d="M373.827,419.34v25.086H226.173V419.34c0-2.045,1.107-3.949,2.896-4.943l11.188-6.307
+                c19.365-10.909,31.348-31.393,31.348-53.639v-26.507h56.79v26.507c0,22.245,11.983,42.729,31.348,53.639l11.188,6.307
+                C372.72,415.391,373.827,417.295,373.827,419.34z"
+                ></path>
+                <path
+                  style="fill:#B7791D;"
+                  d="M373.827,419.34v25.086H359.63V419.34c0-2.045-1.107-3.949-2.896-4.943l-11.188-6.307
+                c-19.365-10.909-31.348-31.393-31.348-53.639v-26.507h14.198v26.507c0,22.245,11.983,42.729,31.348,53.639l11.188,6.307
+                C372.72,415.391,373.827,417.295,373.827,419.34z"
+                ></path>
+                <path
+                  style="fill:#E8A615;"
+                  d="M345.432,305.784v16.478c0,7.841-6.36,14.205-14.198,14.205h-62.469
+                c-7.837,0-14.198-6.364-14.198-14.205v-16.478H345.432z"
+                ></path>
+                <rect
+                  x="271.605"
+                  y="336.468"
+                  style="fill:#B7791D;"
+                  width="56.79"
+                  height="8.353"></rect>
+                <path
+                  style="fill:#343B49;"
+                  d="M396.543,438.745v99.436H203.457v-99.436c0-3.125,2.556-5.682,5.679-5.682h181.728
+                C393.988,433.063,396.543,435.62,396.543,438.745z"
+                ></path>
+                <path
+                  style="fill:#262D38;"
+                  d="M396.543,438.745v99.436h-11.358v-99.436c0-3.125-2.556-5.682-5.679-5.682h11.358
+                C393.988,433.063,396.543,435.62,396.543,438.745z"
+                ></path>
+                <path
+                  style="fill:#262D38;"
+                  d="M413.58,535.34v11.364c0,3.125-2.556,5.682-5.679,5.682H192.099c-3.123,0-5.679-2.557-5.679-5.682
+                V535.34c0-3.125,2.556-5.682,5.679-5.682h215.802C411.025,529.658,413.58,532.215,413.58,535.34z"
+                ></path>
+                <path
+                  style="fill:#171C23;"
+                  d="M413.58,535.34v11.364c0,3.125-2.556,5.682-5.679,5.682h-11.358c3.123,0,5.679-2.557,5.679-5.682
+                V535.34c0-3.125-2.556-5.682-5.679-5.682h11.358C411.025,529.658,413.58,532.215,413.58,535.34z"
+                ></path>
+                <path
+                  style="fill:#E8A615;"
+                  d="M368.148,461.473v39.774c0,3.125-2.556,5.682-5.679,5.682H237.531
+                c-3.123,0-5.679-2.557-5.679-5.682v-39.774c0-3.125,2.556-5.682,5.679-5.682h124.938
+                C365.593,455.791,368.148,458.348,368.148,461.473z"
+                ></path>
+                <path
+                  style="fill:#B7791D;"
+                  d="M345.432,305.784v16.478c0,7.841-6.36,14.205-14.198,14.205h-11.358
+                c7.837,0,14.198-6.364,14.198-14.205v-16.478H345.432z"
+                ></path>
+                <path
+                  style="fill:#E8A615;"
+                  d="M240.37,282.488h-28.395C133.577,282.488,70,218.877,70,140.436V92.139
+                c0-6.279,5.083-11.364,11.358-11.364h93.704v22.728H92.716v36.933c0,65.06,52.304,118.13,117.073,119.295L240.37,282.488z"
+                ></path>
+                <path
+                  style="fill:#E8A615;"
+                  d="M439.136,58.046V69.41c0,138.074-62.299,250.011-139.136,250.011S160.864,207.485,160.864,69.41
+                V58.046H439.136z"
+                ></path>
+                <path
+                  style="fill:#B7791D;"
+                  d="M162.142,103.503h-11.358c-0.568-7.472-0.937-15.057-1.136-22.728h11.358
+                C161.205,88.445,161.574,96.031,162.142,103.503z"
+                ></path>
+                <path
+                  style="fill:#B7791D;"
+                  d="M227.195,282.488h-11.358c-6.332-6.989-12.352-14.887-17.946-23.581
+                c3.919,0.483,7.865,0.739,11.898,0.824C215.241,268.112,221.062,275.726,227.195,282.488z"
+                ></path>
+                <path
+                  style="fill:#B7791D;"
+                  d="M345.432,305.784v5.682c-14.254,8.836-29.531,13.637-45.432,13.637s-31.178-4.801-45.432-13.637
+                v-5.682c14.254,8.836,29.531,13.637,45.432,13.637S331.178,314.62,345.432,305.784z"
+                ></path>
+                <path
+                  style="fill:#B7791D;"
+                  d="M439.136,58.046V69.41c0,133.756-58.466,242.994-131.98,249.699
+                c71.442-6.79,97.906-115.999,97.906-249.699V58.046H439.136z"
+                ></path>
+                <path
+                  style="fill:#E8A615;"
+                  d="M453.333,55.205c0,3.921-1.59,7.472-4.146,10.057c-2.584,2.557-6.133,4.148-10.052,4.148H160.864
+                c-7.837,0-14.198-6.364-14.198-14.205c0-3.921,1.59-7.472,4.146-10.057c2.584-2.557,6.133-4.148,10.052-4.148h278.272
+                C446.973,41,453.333,47.364,453.333,55.205z"
+                ></path>
+                <path
+                  style="fill:#B7791D;"
+                  d="M439.136,69.41c0,3.807-0.057,7.586-0.142,11.364H161.006c-0.085-3.779-0.142-7.557-0.142-11.364
+                H439.136z"
+                ></path>
+                <path
+                  style="fill:#B7791D;"
+                  d="M453.333,55.205c0,3.921-1.59,7.472-4.146,10.057c-2.584,2.557-6.133,4.148-10.052,4.148h-31.235
+                c3.919,0,7.468-1.591,10.052-4.148c2.556-2.585,4.146-6.137,4.146-10.057c0-7.841-6.36-14.205-14.198-14.205h31.235
+                C446.973,41,453.333,47.364,453.333,55.205z"
+                ></path>
+                <path
+                  style="fill:#B7791D;"
+                  d="M368.148,461.473v39.774c0,3.125-2.556,5.682-5.679,5.682H249.741
+                c22.943-0.455,98.531-5.341,98.531-51.139h14.198C365.593,455.791,368.148,458.348,368.148,461.473z"
+                ></path>
+                <path
+                  style="fill:#FFCC66;"
+                  d="M237.531,487.042v-23.245c0-1.284,1.04-2.324,2.323-2.324h50.918
+                C290.772,461.473,250.309,465.735,237.531,487.042z"
+                ></path>
+                <path
+                  style="fill:#4E5868;"
+                  d="M209.846,464.314v-23.245c0-1.284,1.04-2.324,2.323-2.324h50.918
+                C263.086,438.745,222.623,443.006,209.846,464.314z"
+                ></path>
+                <path
+                  style="fill:#FFCC66;"
+                  d="M300,310.898c-30.837,0-116.363-65.088-126.727-218.76h33.733
+                C215.496,280.158,300,310.898,300,310.898z"
+                ></path>
+                <path
+                  style="fill:#FFCC66;"
+                  d="M240.37,421.699c0,0,39.753-25.569,39.753-62.503v62.503H240.37z"
+                ></path>
+                <path
+                  style="fill:#FFCC66;"
+                  d="M166.543,46.682v8.523h-14.198c0-4.688,3.805-8.523,8.519-8.523H166.543z"
+                ></path>
+                <path
+                  style="fill:#B7791D;"
+                  d="M447.512,80.774c-0.199,7.671-0.568,15.256-1.164,22.728h-24.249l2.84-22.728H447.512z"
+                ></path>
+                <path
+                  style="fill:#B7791D;"
+                  d="M399.07,259.248c-5.565,8.551-11.5,16.336-17.747,23.24h-13.175l10.052-10.341l12.011-12.415
+                C393.193,259.674,396.146,259.504,399.07,259.248z"
+                ></path>
+              </g>
+            </g>
           </svg>
-          <span class="w-[clamp(0px,80vw,620px)]">Won Both 2024 Girls and Boys Kho Kho house match together with current 7B and 9B
-          
+          <span class="w-[clamp(0px,80vw,620px)]"
+            >Won Both 2024 Girls and Boys Kho Kho house match together with
+            current 7B and 9B
           </span>
         </div>
         <div class="flex items-center">
-          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEm0lEQVR4nO2aW4hWVRTHf16qSaYoqCwomMSHiIK0osmnqKgZkiZLraS3HnxRukE3o5gotRsZ0g2CCExFMm2kiwU+9FBIdygzKIqasSKrsUgds/lixX/D4rD3OeebOWe+b6Q/bOY7e629zl5nr73WXmsP/I8jE51AL7Aa2AbsBn4DDqnZ7y+BAWAV0KMxbYEpmvwm4CDQaLIdADZKKZPVEiwEPktM8AfgQeBi1zcXuAf4LjHmU2DBRCowG3jHTeAnYFi/DwOPZEwm8AUcAzwgXuv/BfjR8b0FzKpbiSXAH24Ct+jL2/OIVimLrCIBZk5/iXYnsFwyG8A+4Po6FDD7fchNaiswE7gM+EdtfmJsSpGgzN9q3ZK5xY3pr1qJp53pLFP/8doLDSnJGBQx3CX610CH+pY501tblSJhJfZnNuNq9b8PTB+HIlOB98SzwvVfo3dWsjJLJMhMp8/1nybXabR5BTKKFDHMAUa1/050/X16t41fPB7vFDb27Rnaw+q3wEcFihheEd99mf7b1D88Vm/2xhgCXN1te7NKLGyDSTcSzZt4oZcKEfvWCP1F0e4tKa+saSGZDeC5CG25aJ+UPc70asCQc4cBJmCP6OfUoMi54rVjTBY2l0HRrywjbFPEFQacJZodKahBEcPP4o9t7BWibSgScpzcqrnCrgj9Jgmy6FuXIlvFHzuidGluFl9mlDGrnQn6YwkXWaUi94vfcpYYdop+RZ6QEK1twjG8mvO1qlLkBvGbicfwuOgr84RsE1MqL/hY9AtrVOQi8X+QoF8n+mt5Qr4S03kJekiKzqxRkVni/zZBnyu6pc1J7BXTSQn676KfUKMincCfelcMJ0ue5S5JjExwlE6hG/i1YOzByaBICI4h+MaazbUtTWsH8KFShDzMlDwrLyWxu4WbPfB9UyA/bPYv8oQNiOnaFrhfbzZDwNkJvkXisbkmsaogIG6uMSAGvh36a2Z+QYTvCdHvzhPW08IjSuDrcJZhZaFLMnzPi2aeLdeHt+rQ6PmOAl7W8/5Mqelo4AXx5GJjzlev8xif5ZsKPKM+K4LfSJPocRvu2JzEyvx8nYpk961VU5bSJD4qkerGEq86FAlFvFHRrW5cGgtaENmLFF7qalypXCWK19tMkZCrHBLfs9pHpY7T+zTojgko0JXlm+9KqevKeC8U+MJG88nWqRWXTJvhQ7ElVEEHItWeKPo14ICys6qL2GX4OoG3dQ4LLVhLWcv4D2vdytjlTpXXCmX4ZjuvFWuf0wTCyoTlNPO6dJwXPSm+aTpTrXH07aI/pf3rm0X7prDYLelexZl+l+gsakKRqxJ804D17tk+luFyPe/RPeS4YV/gzZzL0EcLLkM7dO94OKHIev0NpmTvyqYRN1Mh+pzgbBvUvpnn+s7XaeD7gjjS0IfpVRFi1B2HwsXTrrIxpCymqKC8wfn28QbEYXdEX6O+l/Q83WWpV1MTZqiMuVL1212qhIxIyUFdV2zRPw4E2w8Y0v7rdn1duvG1aH5G5hD5Lm0K84KnRPpDXrJZscSb76TCnIw52r55EjidSYh1WgEzSX/re2TiX5d7y5OMCWshAAAAAElFTkSuQmCC" alt="internet--v1" class="ml-4">
+          <img
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEm0lEQVR4nO2aW4hWVRTHf16qSaYoqCwomMSHiIK0osmnqKgZkiZLraS3HnxRukE3o5gotRsZ0g2CCExFMm2kiwU+9FBIdygzKIqasSKrsUgds/lixX/D4rD3OeebOWe+b6Q/bOY7e629zl5nr73WXmsP/I8jE51AL7Aa2AbsBn4DDqnZ7y+BAWAV0KMxbYEpmvwm4CDQaLIdADZKKZPVEiwEPktM8AfgQeBi1zcXuAf4LjHmU2DBRCowG3jHTeAnYFi/DwOPZEwm8AUcAzwgXuv/BfjR8b0FzKpbiSXAH24Ct+jL2/OIVimLrCIBZk5/iXYnsFwyG8A+4Po6FDD7fchNaiswE7gM+EdtfmJsSpGgzN9q3ZK5xY3pr1qJp53pLFP/8doLDSnJGBQx3CX610CH+pY501tblSJhJfZnNuNq9b8PTB+HIlOB98SzwvVfo3dWsjJLJMhMp8/1nybXabR5BTKKFDHMAUa1/050/X16t41fPB7vFDb27Rnaw+q3wEcFihheEd99mf7b1D88Vm/2xhgCXN1te7NKLGyDSTcSzZt4oZcKEfvWCP1F0e4tKa+saSGZDeC5CG25aJ+UPc70asCQc4cBJmCP6OfUoMi54rVjTBY2l0HRrywjbFPEFQacJZodKahBEcPP4o9t7BWibSgScpzcqrnCrgj9Jgmy6FuXIlvFHzuidGluFl9mlDGrnQn6YwkXWaUi94vfcpYYdop+RZ6QEK1twjG8mvO1qlLkBvGbicfwuOgr84RsE1MqL/hY9AtrVOQi8X+QoF8n+mt5Qr4S03kJekiKzqxRkVni/zZBnyu6pc1J7BXTSQn676KfUKMincCfelcMJ0ue5S5JjExwlE6hG/i1YOzByaBICI4h+MaazbUtTWsH8KFShDzMlDwrLyWxu4WbPfB9UyA/bPYv8oQNiOnaFrhfbzZDwNkJvkXisbkmsaogIG6uMSAGvh36a2Z+QYTvCdHvzhPW08IjSuDrcJZhZaFLMnzPi2aeLdeHt+rQ6PmOAl7W8/5Mqelo4AXx5GJjzlev8xif5ZsKPKM+K4LfSJPocRvu2JzEyvx8nYpk961VU5bSJD4qkerGEq86FAlFvFHRrW5cGgtaENmLFF7qalypXCWK19tMkZCrHBLfs9pHpY7T+zTojgko0JXlm+9KqevKeC8U+MJG88nWqRWXTJvhQ7ElVEEHItWeKPo14ICys6qL2GX4OoG3dQ4LLVhLWcv4D2vdytjlTpXXCmX4ZjuvFWuf0wTCyoTlNPO6dJwXPSm+aTpTrXH07aI/pf3rm0X7prDYLelexZl+l+gsakKRqxJ804D17tk+luFyPe/RPeS4YV/gzZzL0EcLLkM7dO94OKHIev0NpmTvyqYRN1Mh+pzgbBvUvpnn+s7XaeD7gjjS0IfpVRFi1B2HwsXTrrIxpCymqKC8wfn28QbEYXdEX6O+l/Q83WWpV1MTZqiMuVL1212qhIxIyUFdV2zRPw4E2w8Y0v7rdn1duvG1aH5G5hD5Lm0K84KnRPpDXrJZscSb76TCnIw52r55EjidSYh1WgEzSX/re2TiX5d7y5OMCWshAAAAAElFTkSuQmCC"
+            alt="internet--v1"
+            class="ml-4"
+          />
           <span>First Class in the School to have its own website</span>
         </div>
       </div>
     </section>
-    <section class="lead-by font-alex text-3xl w-screen flex flex-col items-center pt-20">
+    <section
+      class="lead-by font-alex text-3xl w-screen flex flex-col items-center pt-20"
+    >
       <h2 class="text-[var(--darker-primary)]">Lead By</h2>
-      <StudentCard name="Class Teacher" tag="Mithu Das Ma'am" image=""/>
-      <div class="grid grid-cols-2 grid-rows-3 gap-10 pt-10 md:grid-rows-2 md:grid-cols-3">
-        <StudentCard name="Girls Monitor 1" tag="Srishti Mondol" image="srishti.jpg"/>
-        <StudentCard name="Girls Monitor 3" tag="Adrija Mondol" image="adrija.jpg"/>
-        <StudentCard name="Girls Monitor 2" tag="Pratyusha Joshi" image="pratyusha.jpg"/>
-        <StudentCard name="Boys Monitor 1" tag="Utkarsh Chandel" image="utkarsh.jpg"/>
-        <StudentCard name="Boys Monitor 2" tag="Prince Kumar" image="prince.jpg"/>
-        <StudentCard name="Boys Monitor 3" tag="Aarav Kumar" image="aarav.jpg"/>
-
+      <StudentCard name="Class Teacher" tag="Mithu Das Ma'am" image="" />
+      <div
+        class="grid grid-cols-2 grid-rows-2 gap-10 pt-10 md:grid-rows-2 md:grid-cols-2"
+      >
+      <StudentCard
+        name="Girls Monitor 1"
+        tag="Pratyusha Joshi"
+        image="pratyusha.jpg"
+      />
+      <StudentCard
+        name="Boys Monitor 1"
+        tag="Utkarsh Chandel"
+        image="utkarsh.jpg"
+      />
+        <StudentCard
+          name="Girls Monitor 2"
+          tag="Kumari Vasundhara"
+          image="vasu.jpg"
+        />
+        <StudentCard
+          name="Boys Monitor 2"
+          tag="Prince Kumar"
+          image="prince.jpg"
+        />
       </div>
     </section>
-    <Footer/>
-  </body>
-
-  <style>
-    .font-alex{
+    <Footer />
+  </body><style>
+    html {
+      width: 100vw;
+    }
+    .font-alex {
       font-family: "Alex Brush", cursive;
     }
-    .achivements span{
+    .achivements span {
       font-family: "Alex Brush", cursive;
     }
-    .honor{
-      padding-top:100px;
-      color:var(--darker-primary);
-      
+    .honor {
+      padding-top: 100px;
+      color: var(--darker-primary);
     }
-    .honor h2{
-      font-size:38px;
+    .honor h2 {
+      font-size: 38px;
       font-family: "Alex Brush", cursive;
     }
     .lander {
       position: absolute;
       z-index: 0;
       height: 100%;
-      width: 100%;
+      width: 100vw;
 
       display: flex;
       align-items: center;
@@ -176,7 +329,7 @@ import Analytics from '@vercel/analytics/astro'
     #pt2 {
       top: 100px;
       opacity: 0;
-      transition: all 2s;
+      transition: all 2.65s;
       font-size: 60px;
     }
     #pt1 {
@@ -195,6 +348,6 @@ import Analytics from '@vercel/analytics/astro'
       pt1.style.opacity = "0";
       pt2.style.top = "0px";
       pt2.style.opacity = "1";
-    }, 1000);
+    }, 1350);
   </script>
 </html>

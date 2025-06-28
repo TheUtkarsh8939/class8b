@@ -1,0 +1,41 @@
+---
+import Nav from "./../../components/nav.astro"
+import "../../styles/global.css";
+import Poems from "./../../components/poems.svelte"
+export function getStaticPaths() {
+  return [
+    { params: { author: "Pratyusha" }},
+    { params: { author: "Srishti" }},
+    { params: { author: "Utkarsh" }},
+  ];
+}
+
+const { author } = Astro.params;
+const authorDetails: any = {"Srishti":{
+    name:"Srishti Mondol",
+    pic:"/srishti.jpg"
+},"Utkarsh":{
+    name:"Utkarsh Chandel",
+    pic:"/utkarsh.jpg"
+},"Pratyusha":{
+    name:"Pratyusha Joshi",
+    pic:"/pratyusha.jpg"
+}}
+---
+<html>
+    <head>
+        <title>{author}</title>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    </head>
+    <body>
+        <Nav/>
+<main class="pt-40 w-screen h-screen">
+     <div class="intro flex flex-col justify-center gap-20 items-center sm:flex-row w-screen">
+        <img src={authorDetails[author].pic} alt={authorDetails[author].name} class="h-[clamp(30px,50vw,300px)] rounded-[200px]">
+        <span class="text-3xl">{authorDetails[author].name}</span>
+    </div>
+    <div class="poems mt-10"></div>
+    <Poems author={author}/>
+</main>
+    </body>
+</html>

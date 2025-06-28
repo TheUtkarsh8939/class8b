@@ -1,0 +1,135 @@
+---
+import Nav from "./../../components/nav.astro";
+import "../../styles/global.css";
+export function getStaticPaths() {
+  return [
+    { params: { poem: "ut1" } },
+    { params: { poem: "ut2" } },
+    { params: { poem: "ut3" } },
+    { params: { poem: "ut4" } },
+    { params: { poem: "ut5" } },
+    { params: { poem: "st1" } },
+  ];
+}
+const { poem } = Astro.params;
+const poems:any = {
+  ut1: {
+    author: "Utkarsh Chandel",
+    pic: "/utkarsh.jpg",
+    title: "When I saw her",
+    body: `When I saw her,
+for the first time in my life
+I started daydreaming about her
+
+When I saw her
+for the second time in my life
+it felt like I was dreaming
+I pinched myself and this was real
+
+The next day coming to school
+I was thinking about her 
+and the times
+When I saw here
+
+That day when returning back
+She saw me
+and gave me the 
+most beautiful wave ever seen
+
+When I saw her
+I immediately fell in love with her`,
+  },
+  ut2: {
+    author: "Utkarsh Chandel",
+    pic: "/utkarsh.jpg",
+    title: "Doing, Doing, Doing",
+    body: `Doing, Doing, Doing, 
+things on repeat
+Without any unique task
+without any consciousness
+without any reason
+without an end
+standing like a body
+without a soul
+having no goals
+what so all
+
+In the rain which is life,
+we stood like a blade of grass
+doing nothing as the life pass
+"is this the life for which we really asked"`,
+  },
+  ut3: {
+    author: "Utkarsh Chandel",
+    pic: "/utkarsh.jpg",
+    title: "क्या है मन मैं तेरे?",
+    body: `हाट में है बाजार लगे
+गलियों में सजे नज़ारे
+फ़िर भी यहाँ बैठ के तू ग़ज़ल लिखता है
+क्या है मन मैं तेरे?
+
+हर बच्चे खेलते, कूदते घुमते
+तू खुद में खोया रहता है ओ भाई मेरे
+अब बता भी दे 
+क्या है मन मैं तेरे?
+
+रात भर तू बैठा रहता
+हाथ में कलम तेरे
+बिनबोली बातें लिखता जाता है
+क्या है मन मैं तेरे?
+
+एक दिन तेरे कमरे में जाऊँगी
+दो डायरी पढ़के आउंगी, अंदेखा
+तब पता लगेगा
+क्या है मन मैं तेरे?"`,
+  },
+  st1: {
+    author: "Srishti Mondol",
+    pic: "/srishti.jpg",
+    title: "Aaj bhi",
+    body: `Aaj bhi yaad aati hai vo din ki, jab pehli bar
+Tujhe uss chote se taron Jaisi jhund mein
+Chand se chamakta hue dekha tha
+Woh pehla nazar, woh dil ka dharkan, woh anokha sa ahsaas
+maano tham sa gaya tha samay
+chaaro aur mainu to hai bas aas aas
+
+fir himmat jutake baat ki toh baatein hui,
+par zyanda mulkate nahi, kyunki dharkan tez ho jaati meri bas tujhe dekh ke
+fir bhi jana tujhe kareeb se, teri saadgi
+teri Muskaan, teri nazrey bhaa gyi mujhe har taarke se
+
+janta hai tu mere dil ki har baat
+fir bhi bas dost ban kar kehta hai har baat
+par fir bhi khush hun mein ki kam se kam
+hum mein ek Rishta hai jisse tune dosti ka naam diya hai
+pata nahi kaise par aajkal meri din ki suruat
+tere tasveer se hone lagi hai,
+har did har pal, teri muskan, dil gudgaati hai
+Tu dost hai mera nahi janta pura zamana bas kuch ek chroke
+kyunki dar lagta hai mujhe ki nazar lag jayegi sabki hamare is rishte mei
+
+Ajeeb dastan lagti hai mujhme
+kaise tu pyaar se baat toh karta hai pyar nahi karta
+tu samjhe ya na samjhe ye teri marzi
+kyunki mere liye toh abhi sari khusi bas tu hi hai
+`,
+  },
+};
+const current = poems[poem]
+---
+
+<Nav />
+<main class="pt-[140px] ">
+  <div class="writer h-14 mb-12 w-screen border-y-2 gap-4 items-center border-y-[var(--darker-primary)] flex">
+    <img src={current.pic} alt="" class="size-12 rounded-full ">
+    <span class="font-alex text-xl">{current.author}</span>
+  </div>
+  <span class="text-4xl font-alex ml-10 ">{current.title}</span>
+  <pre class="pl-12">{current.body}</pre>
+</main>
+<style>
+  .font-alex{
+    font-family: "Alex brush";
+  }
+</style>
