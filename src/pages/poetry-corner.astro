@@ -5,19 +5,19 @@ import Footer from "../components/footer.astro";
 import Analytics from "@vercel/analytics/astro";
 import StudentCard from "./../components/student-card.svelte";
 import Poems from "./../components/poems.svelte"
+import ClientRouter from "astro/components/ClientRouter.astro";
 ---
 
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+  
+    <ClientRouter transition:name="fade"/>
+  
     <title>Poetry Corner</title>
     <style>
-      body,
-      html {
-        height: 100vh;
-        width: 100vw;
-        margin: 0;
-        padding: 0;
-      }
+
       .font-alex {
         font-family: "Alex Brush", cursive;
       }
@@ -25,16 +25,20 @@ import Poems from "./../components/poems.svelte"
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 1rem;
+        gap: 20px;
       }
+      body{
+        height: 100vh;
+      }
+
     </style>
   </head>
   <body>
     <Analytics />
     <Nav />
-    <main class="pt-[100px] flex flex-col items-center">
+    <main class="pt-[130px] flex flex-col items-center">
       <h2 class="font-alex text-3xl">Poets</h2>
-      <div class="poets">
+      <div class="poets w-screen">
         <a href="/authors/Pratyusha"> <StudentCard name="Pratyusha Joshi" image="./pratyusha.jpg" /></a>
         <a href="/authors/Utkarsh"><StudentCard name="Utkarsh Chandel" image="./utkarsh.jpg" /></a>
         <a href="/authors/Srishti"><StudentCard name="Srishti Mondol" image="./srishti.jpg" /></a>

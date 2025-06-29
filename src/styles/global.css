@@ -13,8 +13,14 @@
     --lighter-bg:hsl(60, 67%, 99%);
 }
 body{
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
     background-color: var(--lighter-bg);
+}
+html{
+    width: 100vw !important;
+    margin:0px;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 *{
     caret-color: transparent;
