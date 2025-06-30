@@ -2,30 +2,63 @@
 import Nav from "../components/nav.astro";
 import "../styles/global.css";
 import "../styles/justifiedGallery.min.css";
+
 const images = [
-  "/gallery/1.jpg",
-  "/gallery/2.jpg",
-  "/gallery/3.jpg",
-  "/gallery/4.jpg",
-  "/gallery/5.jpg",
-  "/gallery/6.jpg",
-  "/gallery/7.jpg",
-  "/gallery/8.jpg",
-  "/gallery/9.jpg",
-  "/gallery/10.jpg",
-  "/gallery/11.jpg",
-  "/gallery/12.jpg",
-  "/gallery/13.jpg",
-  "/gallery/14.jpg",
-  "/gallery/15.jpg",
-  "/gallery/16.jpg",
-  "/gallery/17.jpg",
-  "/gallery/18.jpg",
-  "/gallery/19.jpg",
-  "/gallery/20.jpg",
-  "/gallery/21.jpg",
+  "/gallery/26.jpg",
+  "/gallery/25.jpg",
+  "/gallery/24.jpg",
+  "/gallery/23.jpg",
   "/gallery/22.jpg",
+  "/gallery/21.jpg",
+  "/gallery/20.jpg",
+  "/gallery/19.jpg",
+  "/gallery/18.jpg",
+  "/gallery/17.jpg",
+  "/gallery/16.jpg",
+  "/gallery/15.jpg",
+  "/gallery/14.jpg",
+  "/gallery/13.jpg",
+  "/gallery/12.jpg",
+  "/gallery/11.jpg",
+  "/gallery/10.jpg",
+  "/gallery/9.jpg",
+  "/gallery/8.jpg",
+  "/gallery/7.jpg",
+  "/gallery/6.jpg",
+  "/gallery/5.jpg",
+  "/gallery/4.jpg",
+  "/gallery/3.jpg",
+  "/gallery/2.jpg",
+  "/gallery/1.jpg",
 ];
+const tags: any = {
+    "/gallery/26.jpg":"Math Kit Activity with Shalini Ma'am 2025",
+  "/gallery/25.jpg":"Math Kit Activity with Shalini Ma'am 2025",
+  "/gallery/24.jpg":"Math Kit Activity with Shalini Ma'am 2025",
+  "/gallery/22.jpg": "Nature Activity with Mithu ma'am 2025",
+  "/gallery/23.jpg": "Aarushi manna winning gold in Table tennis regionals",
+  "/gallery/21.jpg": "Last day of 7th with Nandini Ma'am",
+  "/gallery/20.jpg": "Last day of 7th with Nandini Ma'am",
+  "/gallery/19.jpg": "Last day of 7th with Nandini Ma'am",
+  "/gallery/18.jpg": "Last day of 7th with Nandini Ma'am",
+  "/gallery/17.jpg": "Last day of 7th with Nandini Ma'am",
+  "/gallery/16.jpg": "Last day of 7th with Nandini Ma'am",
+  "/gallery/15.jpg": "Last day of 7th with Nandini Ma'am",
+  "/gallery/14.jpg": "Last day of 7th with Nandini Ma'am",
+  "/gallery/13.jpg": "Last day of 7th with Nandini Ma'am",
+  "/gallery/12.jpg": "Last day of 7th with Nandini Ma'am",
+  "/gallery/11.jpg": "Last day of 7th with Aakash Sir",
+  "/gallery/10.jpg": "Last day of 7th with Aakash Sir",
+  "/gallery/9.jpg": "Last day of 7th with Aakash Sir",
+  "/gallery/8.jpg": "Last day of 7th with Aakash Sir",
+  "/gallery/7.jpg": "Last day of 7th with Aakash Sir",
+  "/gallery/6.jpg": "Last day of 7th with Aakash Sir",
+  "/gallery/5.jpg": "Science City visit 2024",
+  "/gallery/4.jpg": "Science City visit 2024",
+  "/gallery/3.jpg": "Science City visit 2024",
+  "/gallery/2.jpg": "Science City visit 2024",
+  "/gallery/1.jpg": "Science City visit 2024",
+};
 ---
 
 <!doctype html>
@@ -40,42 +73,46 @@ const images = [
       integrity="sha256-UgvvN8vBkgO0luPSUl2s8TIlOSYRoGFAX4jlCIm9Adc="
       crossorigin="anonymous"></script>
     <style>
-        .justified-gallery{
-            width: 98vw !important;
-        }
-        .justified-gallery img{
-            border-radius: 20px;
-        }
-        main{
-            background-color: rgb(201, 201, 201);
-            max-width: 100vw;
-            margin: 0;
-            overflow-x: hidden;
-        }
-        body,html{
-            overflow-x: hidden;
+      .justified-gallery {
+        width: 98vw !important;
+      }
+      img {
+        border-radius: 5px;
+        transition: all 0.4s ease;
 
-        }
+      }
+      img:hover {
+        transition: all 0.4s ease;
+
+        transform: scale(1.1); /* You can tweak this */
+      }
+      main {
+        background-color: #f3f1f5;
+        max-width: 100vw;
+        margin: 0;
+        overflow-x: hidden;
+      }
+      body,
+      html {
+        overflow-x: hidden;
+      }
     </style>
   </head>
   <body>
     <Nav />
     <main class="pt-[100px] flex justify-center">
-            
-    <div id="gallery" class="justified-gallery ">
+      <div id="gallery" class="justified-gallery">
         {
-            images.map((src, i) => (
-                <a href={src}>
-            <img src={src}  loading="lazy" />
-          </a>
-        ))
-    }
-    
-    </div>
+          images.map((src, i) => (
+            <a href={src}>
+              <img src={src} loading="lazy" alt={tags[src]} />
+            </a>
+          ))
+        }
+      </div>
     </main>
-
-</body>
-<script src="/js/jquery.justifiedGallery.min.js" is:inline></script>
+  </body>
+  <script src="/js/jquery.justifiedGallery.min.js" is:inline></script>
   <script is:inline>
     window.addEventListener("DOMContentLoaded", () => {
       $("#gallery").justifiedGallery({
