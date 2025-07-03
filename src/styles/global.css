@@ -1,34 +1,37 @@
 @import "tailwindcss";
-:root{
-    /* --darker-primary:hsl(337, 61%, 44%);
+:root {
+  /* --darker-primary:hsl(337, 61%, 44%);
     --primary-color:hsl(337, 75%, 70%);
     --secondry-color:hsl(337, 75%, 85%);
     --background: hsl(322, 73%, 98%);
     --lighter-bg:hsl(315, 80%, 99%); */
-    --darker-primary:hsl(281, 76%, 13%);
-    --primary-color:hsl(281, 76%, 13%);
-    --lighter-primary:hsl(282, 36%, 91%);
-    --secondry-color:hsl(261, 77%, 22%);
-    --background: hsl(60, 22%, 96%);
-    --lighter-bg:hsl(60, 67%, 99%);
+  --darker-primary: hsl(281, 76%, 13%);
+  --primary-color: hsl(281, 76%, 13%);
+  --lighter-primary: hsl(281, 35%, 91%);
+  --secondry-color: hsl(261, 77%, 22%);
+  --background: hsl(60, 22%, 96%);
+  --lighter-bg: hsl(60, 67%, 99%);
 }
-body{
-    /* overflow-x: hidden; */
-    background-color: var(--lighter-bg);
+body {
+  /* overflow-x: hidden; */
+  background-color: var(--lighter-bg);
 }
-html{
-    width: 100vw !important;
-    margin:0px;
-    overflow-y: scroll;
-    overflow-x: hidden;
+.font-alex {
+  font-family: "Alex Brush", cursive;
 }
-*{
-    caret-color: transparent;
-    cursor:default;
-    outline: none;
+html {
+  width: 100vw !important;
+  margin: 0px;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
-a{
-    cursor:pointer;
+* {
+  caret-color: transparent;
+  cursor: default;
+  outline: none;
+}
+a {
+  cursor: pointer;
 }
 /* width */
 ::-webkit-scrollbar {
@@ -42,9 +45,13 @@ a{
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(0deg,transparent,var(--darker-primary),transparent);
+  background: linear-gradient(
+    0deg,
+    transparent,
+    var(--darker-primary),
+    transparent
+  );
   border-radius: 10px;
-
 }
 
 /* Handle on hover */

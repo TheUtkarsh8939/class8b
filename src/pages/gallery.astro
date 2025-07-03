@@ -2,7 +2,7 @@
 import Nav from "../components/nav.astro";
 import "../styles/global.css";
 import "../styles/justifiedGallery.min.css";
-
+import Loader from "../components/loader.astro";
 const images = [
   "/gallery/26.jpg",
   "/gallery/25.jpg",
@@ -32,9 +32,9 @@ const images = [
   "/gallery/1.jpg",
 ];
 const tags: any = {
-    "/gallery/26.jpg":"Math Kit Activity with Shalini Ma'am 2025",
-  "/gallery/25.jpg":"Math Kit Activity with Shalini Ma'am 2025",
-  "/gallery/24.jpg":"Math Kit Activity with Shalini Ma'am 2025",
+  "/gallery/26.jpg": "Math Kit Activity with Shalini Ma'am 2025",
+  "/gallery/25.jpg": "Math Kit Activity with Shalini Ma'am 2025",
+  "/gallery/24.jpg": "Math Kit Activity with Shalini Ma'am 2025",
   "/gallery/22.jpg": "Nature Activity with Mithu ma'am 2025",
   "/gallery/23.jpg": "Aarushi manna winning gold in Table tennis regionals",
   "/gallery/21.jpg": "Last day of 7th with Nandini Ma'am",
@@ -79,7 +79,6 @@ const tags: any = {
       img {
         border-radius: 5px;
         transition: all 0.4s ease;
-
       }
       img:hover {
         transition: all 0.4s ease;
@@ -100,7 +99,16 @@ const tags: any = {
   </head>
   <body>
     <Nav />
-    <main class="pt-[100px] flex justify-center">
+    <section
+      id="gallery-loader"
+      class="loader h-screen w-screen flex items-center justify-center flex-col"
+    >
+      <Loader />
+      <label class="font-alex text-3xl"
+        >Hang In there while we race back our mind for the memories</label
+      >
+    </section>
+    <main class="pt-[100px] flex justify-center flex-col">
       <div id="gallery" class="justified-gallery">
         {
           images.map((src, i) => (
@@ -110,17 +118,48 @@ const tags: any = {
           ))
         }
       </div>
+      <div id="scroll-loader" class="text-center text-2xl font-alex flex h-10 items-center justify-center bg-white">
+        <img src="/loader.gif" alt="" class="size-10">
+        Wait there while we load more
+      </div>
     </main>
   </body>
   <script src="/js/jquery.justifiedGallery.min.js" is:inline></script>
   <script is:inline>
     window.addEventListener("DOMContentLoaded", () => {
+      const galleryEl = document.getElementById("gallery");
+      const loader = document.getElementById("gallery-loader");
+      const lastImage = document.querySelector("#gallery img:last-child");
+      const scroll_loader = document.getElementById("scroll-loader");
+      // Start Justified Gallery
       $("#gallery").justifiedGallery({
         rowHeight: 160,
         margins: 5,
         captions: true,
         lastRow: "justify",
       });
+
+      // Wait for first image to load
+      const firstImg = galleryEl.querySelector("img");
+
+      if (firstImg && !firstImg.complete) {
+        firstImg.onload = showGallery;
+      } else {
+        showGallery();
+      }
+
+      function showGallery() {
+        loader.style.display = "none";
+        galleryEl.style.opacity = "1";
+      }
+      if (lastImage && !lastImage.complete) {
+        lastImage.addEventListener("load", () => {
+          scroll_loader.style.opacity = "0";
+        });
+      } else {
+        // Already cached? Hide immediately
+        scroll_loader.style.opacity = "0";
+      }
     });
   </script>
 </html>
